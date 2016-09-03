@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.hasibuzzaman.fragment_viewpager.MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#e3e3e3"
+    android:baselineAligned="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+>
+
+<!--        <com.astuetz.PagerSlidingTabStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pagersliding"
+            >
+
+
+        </com.astuetz.PagerSlidingTabStrip>-->
+
+   <!--     <com.astuetz.PagerSlidingTabStrip
+            app:pstsShouldExpand="true"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="14sp"
+            android:id="@+id/pagersliding"
+            android:textColor="#000000"
+            app:pstsDividerColor="#0e7904"
+            app:pstsIndicatorColor="#ae0712"
+            app:pstsTabPaddingLeftRight="14dp"
+            >
+        </com.astuetz.PagerSlidingTabStrip>-->
+
+    <com.example.hasibuzzaman.fragment_viewpager.SlidingTabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:id="@+id/pagersliding"
+        android:background="#487669"
+        >
+
+
+    </com.example.hasibuzzaman.fragment_viewpager.SlidingTabLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:padding="2dp"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="প্রথম"
+                android:id="@+id/button"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:onClick="change"
+                android:nestedScrollingEnabled="true"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/border1"
+                android:layout_gravity="top|center_horizontal"
+                android:background="#1631cc"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:padding="2dp"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="দ্বিতীয়"
+                android:id="@+id/button2"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:onClick="change"
+                android:nestedScrollingEnabled="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/border2"
+                android:layout_gravity="left|center_horizontal"
+                android:background="#1631cc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="তৃতীয়"
+                android:id="@+id/button3"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:onClick="change"
+                android:nestedScrollingEnabled="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/border3"
+                android:layout_gravity="left|center_horizontal"
+                android:background="#1631cc" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:id="@+id/fragmentHolder">
+
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
